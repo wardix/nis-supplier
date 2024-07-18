@@ -1,0 +1,14 @@
+{
+  "name": "nis-supplier",
+  "scripts": {
+    "dev": "bun run --hot src/main.ts",
+    "build": "bun build --minify --target bun --outfile dist/main.js src/main.ts"
+  },
+  "dependencies": {
+    "hono": "^4.4.9",
+    "mysql2": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
