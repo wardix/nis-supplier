@@ -16,6 +16,7 @@ app.get('/subscribers', async (c) => {
     LEFT JOIN CustomerServices cs ON fvs.typeId = cs.CustServId
     WHERE fvs.type = 'CustomerServices'
     AND fvs.typeId > 0
+    AND vfs.show = 1
     AND fvs.vendor_id IN (${operatorsPlaceholder})
   `
   const [rows] = await dbPool.execute<RowDataPacket[]>(sql, operators)
